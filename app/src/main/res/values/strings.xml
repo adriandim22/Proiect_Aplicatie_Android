@@ -11,9 +11,7 @@
     <string name="authentication_invalid_password">Invalid password</string>
 
     <string name="authentication_arg_username">Username</string>
-    <string name="authentication_hint_username">username</string>
     <string name="authentication_arg_password">Password</string>
-    <string name="authentication_hint_password">password</string>
     <string name="authentication_action_forgot_password"><u>Forgot password?</u></string>
     <string name="authentication_action_log_in">Log In</string>
     <string name="authentication_action_go_to_register">Sign up</string>
