@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="orange">#FF9800</color>
+    <color name="bleu">#2196F3</color>
+    <color name="blue">#57CBFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+
+    <color name="white_alpha_50">#80FFFFFF</color>
+
+    <color name="shark">#1A1A1C</color>
+    <color name="scarpa_flow">#58585B</color>
+    <color name="shark_second">#272729</color>
+    <color name="french_gray">#C0C0C5</color>
+    <color name="broom">#FFE512</color>
+    <color name="jumbo">#838388</color>
+    <color name="ship_gray">#3F3F41</color>
+
+</resources>

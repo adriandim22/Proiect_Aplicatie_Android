@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Proiect  Aplicatie Android</string>
+    <string name="welcome">Welcome</string>
+    <string name="register">Register</string>
+    <string name="creati_un_cont_nou">Creati un cont nou:</string>
+
+    <string name="login">Login</string>
+    <string name="authentication_hint_username">Username</string>
+    <string name="authentication_hint_password">Password</string>
+    <string name="authentication_invalid_username">Invalid username</string>
+    <string name="authentication_invalid_password">Invalid password</string>
+
+</resources>
