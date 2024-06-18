@@ -20,7 +20,8 @@ import com.cst.proiectaplicatieandroid.utils.extensions.logErrorMessage
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class NewsFragment: Fragment() {
+class NewsFragment : Fragment() {
+
 
     private val cartItemList by lazy {
         ArrayList<CartItemModel>()
@@ -44,9 +45,10 @@ class NewsFragment: Fragment() {
 
         getNews()
     }
+
+    // Setup RecyclerView with LinearLayoutManager and custom adapter
     private fun setupRecyclerView() {
         val layoutManager = LinearLayoutManager(context)
-
 
 
         view?.findViewById<RecyclerView>(R.id.rv_news)?.apply {
@@ -55,6 +57,7 @@ class NewsFragment: Fragment() {
         }
     }
 
+    // Performs an HTTP GET request to fetch news data
     private fun getNews() {
         val url = "https://fakestoreapi.com/products"
 
@@ -66,12 +69,13 @@ class NewsFragment: Fragment() {
             },
             { "That didn't work!".logErrorMessage() })
 
-// Add the request to the RequestQueue.
+        // Add the request to the RequestQueue.
         VolleyRequestQueue.addToRequestQueue(stringRequest)
     }
 
+    // Deserialize JSON response and update RecyclerView adapter
     private fun handleNewsResponse(response: String) {
-        val type = object: TypeToken<List<NewsAPIResponseModel>>() {}.type
+        val type = object : TypeToken<List<NewsAPIResponseModel>>() {}.type
         val responseJsonArray = Gson().fromJson<List<NewsAPIResponseModel>>(response, type)
 
         responseJsonArray
@@ -83,7 +87,7 @@ class NewsFragment: Fragment() {
 
                 )
 
-                val  news = it.value.map { newsApi ->
+                val news = it.value.map { newsApi ->
                     NewsModel(
                         name = newsApi.name,
                         description = newsApi.description
@@ -94,7 +98,7 @@ class NewsFragment: Fragment() {
                 cartItemList.addAll(news)
             }
 
-        adapter.notifyItemRangeInserted(0,cartItemList.size)
+        adapter.notifyItemRangeInserted(0, cartItemList.size)
 
     }
 }

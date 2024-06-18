@@ -34,7 +34,6 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
         auth = Firebase.auth
@@ -67,8 +66,8 @@ class LoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 Log.d("LoginFragment", "signInWithEmail:success")
-                // Navigate to next fragment or activity
-                findNavController().navigate(R.id.action_loginFragment_to_newsFragment) // Update this ID to your actual next fragment or activity
+                // Navigate to next fragment
+                findNavController().navigate(R.id.action_loginFragment_to_newsFragment)
             } else {
                 Log.w("LoginFragment", "signInWithEmail:failure", task.exception)
                 Toast.makeText(context, "Authentication failed.", Toast.LENGTH_SHORT).show()
