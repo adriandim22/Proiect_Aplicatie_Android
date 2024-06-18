@@ -43,8 +43,10 @@ class LoginFragment : Fragment() {
             passwordEditText?.setText("83r5^_")
         }
 
-        val button = view.findViewById<Button>(R.id.btn_register)
-        button.setOnClickListener { goToRegister() }
+        val button = view.findViewById<Button>(R.id.btn_sign_up)
+        button.setOnClickListener {
+            goToRegister()
+        }
 
         view.findViewById<Button>(R.id.btn_login).setOnClickListener {
             doLogin()

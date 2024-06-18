@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class MatchDBModel(
     @PrimaryKey
-    val matchId: Int = 0,
+    val matchId: Int,
     val date: String,
     val location: String
 )
