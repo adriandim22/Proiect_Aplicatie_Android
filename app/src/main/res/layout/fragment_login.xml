@@ -1,112 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/shark">
+    android:background="?attr/colorPrimary">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/ll_form_data"
+        app:layout_constraintDimensionRatio="H, 248:53"
+        app:layout_constraintEnd_toEndOf="@id/ll_form_data"
+        app:layout_constraintStart_toStartOf="@id/ll_form_data"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/ll_form_data"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintWidth_percent="0.85"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintWidth_percent="0.85">
 
         <TextView
             style="@style/FormSectionTextView.AuthenticationUsername"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
+
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/default_space_half"/>
+            android:layout_height="@dimen/default_space_half" />
 
         <EditText
             style="@style/FormSectionEditText.AuthenticationUsername"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/default_space"/>
+            android:layout_height="@dimen/default_space" />
 
 
         <TextView
             style="@style/FormSectionTextView.AuthenticationPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/default_space_half"/>
+            android:layout_height="@dimen/default_space_half" />
 
         <EditText
             style="@style/FormSectionEditText.AuthenticationPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/default_space_half"/>
+            android:layout_height="@dimen/default_space_half" />
 
         <TextView
             style="@style/FormActionTextView.AuthenticationForgotPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/ActionButton.AuthenticationLogIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ll_form_data"
+        app:layout_constraintStart_toStartOf="@id/ll_form_data"
+        app:layout_constraintTop_toBottomOf="@id/ll_form_data"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ll_form_data"
+        app:layout_constraintStart_toStartOf="@id/ll_form_data"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        app:layout_constraintVertical_bias="0.85">
+
+        <TextView
+            style="@style/FormHintsTextView.AuthenticationNoAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/ActionSecondButton.AuthenticationGoToSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         android:visibility="gone"
-        app:layout_constraintWidth_percent="0.8"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintWidth_percent="0.8">
 
         <EditText
             android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/authentication_hint_username"/>
+            android:hint="@string/authentication_hint_username" />
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/default_space"/>
+            android:layout_height="@dimen/default_space" />
 
         <EditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/authentication_hint_password"/>
+            android:hint="@string/authentication_hint_password" />
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/default_space"/>
+            android:layout_height="@dimen/default_space" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        />
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/default_space"/>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/default_space" />
 
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
-        />
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register" />
 
     </LinearLayout>
 

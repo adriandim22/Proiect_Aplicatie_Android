@@ -34,6 +34,17 @@
         <item name="android:paddingBottom">@dimen/default_space_half</item>
     </style>
 
+    <!-- Form Hints -->
+
+    <style name="FormHintsTextView" parent="AppTextView">
+        <item name="android:textColor">@color/jumbo</item>
+        <item name="android:textSize">@dimen/material_text_subhead</item>
+    </style>
+
+    <style name="FormHintsTextView.AuthenticationNoAccount">
+        <item name="android:text">@string/authentication_hint_no_account</item>
+    </style>
+
 
 
 </resources>

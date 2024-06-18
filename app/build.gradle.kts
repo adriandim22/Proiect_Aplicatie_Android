@@ -51,9 +51,14 @@ dependencies {
     implementation (libs.gson)
 
 
-    implementation(libs.androidx.room.runtime)
-    //implementation("androidx.room:room-ktx:$2.6.1")
-    kapt("androidx.room:room-*:2.7.0-alpha04")
+    val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    implementation("androidx.room:room-ktx:2.6.1")
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:$room_version")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
