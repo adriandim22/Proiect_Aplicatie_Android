@@ -3,10 +3,12 @@
     <string name="welcome">Welcome</string>
     <string name="register">Register</string>
     <string name="creati_un_cont_nou">Creati un cont nou:</string>
+    <string name="acs_luceafarul">ACS LUCEAFARUL</string>
 
     <string name="login">Login</string>
     <string name="authentication_hint_username">Username</string>
     <string name="authentication_hint_password">Password</string>
+    <string name="authentication_hint_confirm_password">Confirm Password</string>
     <string name="authentication_hint_email">Email</string>
     <string name="authentication_invalid_username">Invalid username</string>
     <string name="authentication_invalid_password">Invalid password</string>
@@ -17,5 +19,6 @@
     <string name="authentication_action_log_in">Log In</string>
     <string name="authentication_action_go_to_register">Sign up</string>
     <string name="authentication_hint_no_account">Don\'t have an account?</string>
+
 
 </resources>

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
     id("org.jetbrains.kotlin.kapt")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -35,11 +36,18 @@ android {
 
     buildFeatures {
         buildConfig = true
+        viewBinding = true
     }
 }
 
 dependencies {
 
+    // Firebase BOM (Bill of Materials)
+   // implementation platform("com.google.firebase:firebase-bom:29.0.3") // Check for the latest version on Firebase's website
+
+// Firebase Authentication
+    implementation ("com.google.firebase:firebase-auth")
+    implementation(libs.firebase.auth)
     val nav_version = "2.7.7"
 
     // Kotlin
